@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const BasicDetailsSchema = mongoose.Schema({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },

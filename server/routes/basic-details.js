@@ -24,7 +24,8 @@ router.get("/:id", async (req, res) => {
 // Add a basic detail
 router.post("/", async (req, res) => {
   const basicDetail = new BasicDetails({
-    name: req.body.name,
+    firstName: req.body.name,
+    lastName: req.body.name,
     email: req.body.email,
     mobile: req.body.mobile,
     address: req.body.address,
@@ -34,6 +35,7 @@ router.post("/", async (req, res) => {
   try {
     const savedBasicDetail = await basicDetail.save();
     res.send(savedBasicDetail);
+    console.log(savedBasicDetail._id);
   } catch (err) {
     res.send({ message: err });
   }
@@ -47,7 +49,8 @@ router.patch("/:id", async (req, res) => {
       { _id: req.params.id },
       {
         $set: {
-          name: req.body.name,
+          firstName: req.body.name,
+          lastName: req.body.name,
           email: req.body.email,
           mobile: req.body.mobile,
           address: req.body.address,
