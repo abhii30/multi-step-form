@@ -1,10 +1,16 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 
 require("dotenv/config");
 const port = process.env.PORT;
+
+// Middlewares
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
 
 // Listeninig on port 3001
 app.listen(process.env.PORT, () => {
@@ -25,8 +31,7 @@ const basicDetailsRoute = require("./routes/basic-details");
 // const resumeDetailsRoute = require("./routes/resume-details");
 
 
-// Middleware
-app.use(express.json());
+
 
 // Route Middlewares
 app.use("/basic-details", basicDetailsRoute);

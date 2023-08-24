@@ -24,8 +24,8 @@ router.get("/:id", async (req, res) => {
 // Add a basic detail
 router.post("/", async (req, res) => {
   const basicDetail = new BasicDetails({
-    firstName: req.body.name,
-    lastName: req.body.name,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
     mobile: req.body.mobile,
     address: req.body.address,
