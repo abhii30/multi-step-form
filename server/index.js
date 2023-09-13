@@ -25,10 +25,7 @@ const basicDetailsRoute = require("./routes/basic-details");
 // const skillDetailsRoute = require("./routes/skill-details");
 // const achievementDetailsRoute = require("./routes/achievement-details");
 // const certificationDetailsRoute = require("./routes/certification-details");
-// const interestDetailsRoute = require("./routes/interest-details");
-// const languageDetailsRoute = require("./routes/language-details");
-// const referenceDetailsRoute = require("./routes/reference-details");
-// const resumeDetailsRoute = require("./routes/resume-details");
+// const resumeDetailsRoute = require("./routes/resume-details"); //other links
 
 
 
